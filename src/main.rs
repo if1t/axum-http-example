@@ -25,5 +25,5 @@ struct QueryParams {
 
 async fn handler(Query(params): Query<QueryParams>) -> Result<Html<String>, StatusCode> {
     let name = params.name;
-    Ok(Html(String::from(format!("Hello, {}!", name))))
+    Ok(Html(format!("Hello, {}!", name)))
 }
